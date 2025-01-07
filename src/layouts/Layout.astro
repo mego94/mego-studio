@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
-import background from '../assets/background.svg';
+import { Image } from 'astro:assets';
+import WinterImg from '../assets/wintervector.jpg';
 ---
 
 <html lang="en">
@@ -12,7 +13,8 @@ import background from '../assets/background.svg';
 		<title>Mego Studio</title>
 	</head>
 	<body>
-		<img id="background" src={background.src} alt="" fetchpriority="high" />
+		<!-- <img id="background" src={background.src} alt="" fetchpriority="high" /> -->
+		<Image id="background" src={WinterImg} alt="Fondo" />
 		<slot />
 	</body>
 </html>
