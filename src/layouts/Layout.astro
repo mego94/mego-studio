@@ -1,10 +1,9 @@
 ---
 import '../styles/global.css';
-import { Image } from 'astro:assets';
-import WinterImg from '../assets/wintervector.jpg';
+import Navbar from '@components/Navbar.astro';
 ---
 
-<html lang="en">
+<html lang="en" data-astro-transition-scope="astro-smooz4hq-1" class="">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -13,8 +12,7 @@ import WinterImg from '../assets/wintervector.jpg';
 		<title>Mego Studio</title>
 	</head>
 	<body>
-		<!-- <img id="background" src={background.src} alt="" fetchpriority="high" /> -->
-		<Image id="background" src={WinterImg} alt="Fondo" />
+		<Navbar />
 		<slot />
 	</body>
 </html>
