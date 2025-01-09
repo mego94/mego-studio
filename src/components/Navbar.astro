@@ -54,7 +54,7 @@ import darkToggle from '../assets/moon.svg';
 		document.documentElement.classList.add('light');
 	}
 
-	window.localStorage.setItem('theme', theme);
+	window.localStorage.setItem('theme', theme || 'dark');
 
 	const handleToggleClick = () => {
 		const element = document.documentElement;
