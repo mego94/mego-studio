@@ -118,7 +118,7 @@ svg:not(:root) {
 	transform-origin: 0px 0px;
 }
 
-svg:hover {
+#themeToggle svg:hover {
 	rotate: 10deg;
 }
 
@@ -195,10 +195,19 @@ p {
 
 .skills-img {
 	margin: 8px 4px;
-	border-radius: 100%;
 	width: 50px;
 	height: 50px;
-	object-fit: scale-down;
+}
+
+footer {
+	margin: 4rem 0;
+	pad: 15px;
+}
+
+small {
+	font-family: var(--body);
+	font-size: 0.6rem;
+	font-weight: 400;
 }
 
 code {
