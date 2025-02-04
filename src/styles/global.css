@@ -152,7 +152,7 @@ h2 {
 
 p {
 	font-family: var(--body);
-	font-size: 1.1rem;
+	font-size: 1.2rem;
 	hyphens: auto;
 	line-height: 1.5;
 	text-indent: 1rem;
@@ -206,7 +206,7 @@ footer {
 
 small {
 	font-family: var(--body);
-	font-size: 0.6rem;
+	font-size: 0.7rem;
 	font-weight: 400;
 }
 
