@@ -164,11 +164,13 @@ p {
 
 .light .card__title,
 .light .card__txt,
-.light .btn {
+.light .btn,
+.light .contactForm button {
 	color: var(--text-light);
 }
 
-.btn {
+.btn,
+.contactForm button {
 	text-align: center;
 	background: #0000;
 	border: 2px solid var(--button);
@@ -179,12 +181,14 @@ p {
 	transition: backgroud 0.4s, color 0.4s;
 }
 
-.btn:hover {
+.btn:hover,
+.contactForm button:hover {
 	background: var(--button);
 	color: var(--text-light);
 }
 
-.light .btn:hover {
+.light .btn:hover,
+.light .contactForm button:hover {
 	background: var(--button);
 	color: #ffffff;
 }
@@ -217,6 +221,74 @@ code {
 	border-radius: 8px;
 	border: 1px solid transparent;
 	padding: 6px 8px;
+}
+
+.contactForm {
+	font-family: var(--body);
+	background: var(--background);
+	color: var(--text);
+	max-width: calc(800px - 4rem);
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	width: 100%;
+	border: 2px solid var(--underline);
+	border-radius: 12px;
+	box-shadow: rgba(231, 216, 216, 0.7) 0px 2px 4px,
+		rgba(133, 124, 124, 0.5) 0px 1px 2px;
+	transition: box-shadow 0.4s;
+}
+
+.light .contactForm {
+	background: var(--background-light);
+	color: var(--text-light);
+}
+
+.contactForm:hover {
+	box-shadow: rgba(231, 216, 216, 0.7) 0px 4px 8px,
+		rgba(133, 124, 124, 0.5) 0px 3px 6px;
+}
+
+.contactForm label {
+	font-size: 1.1rem;
+}
+
+.contactForm input,
+.contactForm textarea {
+	padding: 0.7rem 1rem;
+	width: calc(100% - 2rem);
+	margin-bottom: 1em;
+	background-color: var(--background);
+	font-family: var(--body);
+	color: var(--text);
+	font-size: 1rem;
+	border: 1px solid var(--underline);
+	border-radius: 5px;
+	transition: border-color 0.3s, background-color 0.3s;
+}
+
+.light .contactForm input,
+.light .contactForm textarea {
+	background: var(--background-light);
+	color: var(--text-light);
+}
+
+.contactForm textarea {
+	resize: none;
+	height: 7rem;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+	border-color: #000000;
+	background-color: #3d353d;
+}
+
+.light .contactForm input:focus,
+.light .contactForm textarea:focus {
+	border-color: #000000;
+	background-color: #dad5e2;
 }
 
 @media only screen and (max-width: 800px) {

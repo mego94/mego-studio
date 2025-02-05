@@ -1,0 +1,43 @@
+<form id="contactForm" class="contactForm">
+	<label> Name: </label>
+	<input type="text" name="name" required />
+
+	<label> Email: </label>
+	<input type="email" name="email" required />
+
+	<label> Message: </label>
+	<textarea name="message" required></textarea>
+
+	<button type="submit">Send</button>
+	<p id="form-message"></p>
+</form>
+
+<script>
+	const formElement = document.getElementById('contactForm') as HTMLFormElement;
+	if (formElement) {
+		formElement.addEventListener('submit', async function (event) {
+			event.preventDefault();
+			const formData = new FormData(this);
+
+			const response = await fetch('/api/contact', {
+				method: 'POST',
+				body: JSON.stringify(Object.fromEntries(formData)),
+				headers: { 'Content-Type': 'application/json' },
+			});
+
+			const messageElement = document.getElementById('form-message');
+			if (response.ok) {
+				if (messageElement) {
+					messageElement.textContent = 'Message sent successfully! (^w^)/';
+					messageElement.style.color = 'green';
+				}
+				this.reset();
+			} else {
+				if (messageElement) {
+					messageElement.textContent = 'Something went wrong. Try again later.';
+					messageElement.style.color = 'red';
+				}
+			}
+		});
+	}
+</script>
