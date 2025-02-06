@@ -296,4 +296,7 @@ code {
 		width: calc(100% - 10px);
 		margin: 0 20px;
 	}
+	.contactForm {
+		width: calc(100% - 4rem);
+	}
 }
