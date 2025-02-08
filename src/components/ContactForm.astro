@@ -1,14 +1,21 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <form id="contactForm" class="contactForm">
-	<label> Name: </label>
+	<label> {t('contact.name')} </label>
 	<input type="text" name="name" required />
 
-	<label> Email: </label>
+	<label> {t('contact.email')} </label>
 	<input type="email" name="email" required />
 
-	<label> Message: </label>
+	<label> {t('contact.message')} </label>
 	<textarea name="message" required></textarea>
 
-	<button type="submit">Send</button>
+	<button type="submit"> {t('contact.send')} </button>
 	<p id="form-message"></p>
 </form>
 
@@ -34,7 +41,8 @@
 				this.reset();
 			} else {
 				if (messageElement) {
-					messageElement.textContent = 'Something went wrong. Try again later.';
+					messageElement.textContent =
+						'Something went wrong. Please try again later.';
 					messageElement.style.color = 'red';
 				}
 			}

@@ -47,7 +47,7 @@ body {
 
 .navbar {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 2fr;
 	margin-top: 0.5rem;
 }
 
@@ -91,6 +91,10 @@ button {
 	cursor: pointer;
 }
 
+.lang-icon {
+	transform: translateY(3px);
+}
+
 #themeToggle[data-astro-cid-oemx51e4] {
 	border: 0;
 	background: none;
@@ -115,7 +119,7 @@ svg:not(:root) {
 }
 
 :not(svg) {
-	transform-origin: 0px 0px;
+	transform-origin: 0px 100px;
 }
 
 #themeToggle svg:hover {

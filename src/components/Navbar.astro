@@ -1,22 +1,31 @@
+---
+import LanguagePicker from '@components/LanguagePicker.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <header>
 	<nav>
 		<div class="navbar">
 			<div class="navbar-title">
-				<a href="/">Mego Studio</a>
+				<a href={`/${lang}`}>Mego Studio</a>
 			</div>
 			<div class="navbar-menu">
-				<a href="/projects">Projects</a>
+				<a href={`/${lang}/projects`}>{t('nav.projects')}</a>
 				<a
 					href="https://www.linkedin.com/in/diego-andres-mejia-valdivia-a3a942221/"
 					target="_blank"
-					rel="noopener noreferrer">LinkedIn</a
+					rel="noopener noreferrer">{t('nav.linkedin')}</a
 				>
 				<a
 					href="https://github.com/mego94"
 					target="_blank"
-					rel="noopener noreferrer">GitHub</a
+					rel="noopener noreferrer">{t('nav.github')}</a
 				>
-				<a href="/contact">Contact</a>
+				<a href={`/${lang}/contact`}>{t('nav.contact')}</a>
+				<LanguagePicker />
 				<button id="themeToggle" title="Theme Toggle" data-astro-cid-oemx51e4>
 					<svg
 						width="30px"
