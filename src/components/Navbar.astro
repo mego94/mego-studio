@@ -2,6 +2,7 @@
 import LanguagePicker from '@components/LanguagePicker.astro';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
+const myResume = '/Diego_Mejia_CV.pdf';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
@@ -24,6 +25,7 @@ const t = useTranslations(lang);
 					target="_blank"
 					rel="noopener noreferrer">{t('nav.github')}</a
 				>
+				<a href={myResume} target="_blank" rel="noopener noreferrer">{t('nav.resume')}</a>
 				<a href={`/${lang}/contact`}>{t('nav.contact')}</a>
 				<LanguagePicker />
 				<button id="themeToggle" title="Theme Toggle" data-astro-cid-oemx51e4>
