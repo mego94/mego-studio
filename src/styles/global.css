@@ -295,6 +295,76 @@ code {
 	background-color: #dad5e2;
 }
 
+.projects {
+	text-align: center;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	justify-items: center;
+}
+
+.card {
+	display: flex;
+	align-items: center;
+	background: var(--background);
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+	text-align: left;
+	max-width: 700px;
+	width: 100%;
+	padding: 1rem;
+	font-family: var(--body);
+	color: var(--text);
+}
+
+.light .card {
+	background: var(--background-light);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	color: var(--text-light);
+}
+
+.card img {
+	width: 40%;
+	height: auto;
+	border-radius: 10px;
+}
+
+.card .info {
+	padding: 1rem;
+	flex: 1;
+}
+
+.card .info h3 {
+	margin: 0;
+	font-size: 1.5rem;
+}
+
+.card .info p {
+	margin: 0.5rem 0;
+	font-size: 1rem;
+}
+
+.card .info a {
+	display: inline-block;
+	margin-top: 0.5rem;
+	color: var(--text);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.light .card .info a {
+	color: var(--text-light);
+}
+
+.card .info a:hover {
+	color: var(--underline);
+	text-decoration: underline var(--underline);
+	text-decoration-thickness: 5px;
+	text-underline-offset: 6px;
+}
+
 @media only screen and (max-width: 800px) {
 	html {
 		width: calc(100% - 10px);
@@ -302,5 +372,18 @@ code {
 	}
 	.contactForm {
 		width: calc(100% - 4rem);
+	}
+
+	.projects {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 1fr);
+	}
+
+	.card {
+		display: block;
+	}
+
+	.card img {
+		width: 100%;
 	}
 }

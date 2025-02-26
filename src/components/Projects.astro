@@ -1,0 +1,21 @@
+---
+import { getLangFromUrl } from '../i18n/utils';
+import en from '../data/en.json';
+import es from '../data/es.json';
+
+const langCode = getLangFromUrl(Astro.url);
+const lang = langCode === 'en' ? en : es;
+---
+
+<section class="projects">
+    {lang.map((project) => (
+      <div class="card">
+        <img src={project.image} alt={project.title} />
+        <div class="info">
+          <h3>{project.title}</h3>
+          <p>{project.description}</p>
+          <a href={project.github} target="_blank">View on GitHub</a>
+        </div>
+      </div>
+    ))}
+</section>
